@@ -1,0 +1,45 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+nav.nav-center ul {
+  text-align: center;
+  float: none !important;
+}
+nav.nav-center ul li {
+  display: inline;
+  float: none;
+}
+nav.nav-center ul li a {
+  display: inline-block;
+  font-family: 'Cabin', sans-serif;
+}
+
+.my-parallax {
+    /* The image used */
+    background-image: url("../img/cover.jpg");
+
+    /* Full height */
+    height: 300px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
