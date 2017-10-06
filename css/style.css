@@ -28,8 +28,15 @@ body {
 }
 
 #logo-container {
-  width: 100%;
-  position: absolute;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.flex-initial {
+  flex: initial;
+}
+.flex-auto {
+  flex: auto;
 }
 nav {
   position: absolute;
@@ -37,12 +44,16 @@ nav {
   left: 0;
   padding: 0px 60px;
 }
-nav .brand-logo {
+nav .my-brand-logo {
   width: 0;
   height: 0;
   position: relative;
   display: inline-block;
+  color: #fff;
+  font-size: 2.1rem;
+  padding: 0;
 }
+
 #title {
   position: relative;
   display: inline-block;
@@ -110,16 +121,51 @@ nav ul a:hover {
   /*flex-direction: column;*/
 }
 
+#hamburger {
+  display: inline-flex;
+  height: 100%;
+  float: right;
+  margin: 0;
+}
+
 .my-parallax {
-    /* The image used */
-    background-image: url("../img/cover.jpg");
+  /* The image used */
+  background-image: url("../img/cover.jpg");
 
-    /* Full height */
-    height: 300px;
+  /* Full height */
+  height: 300px;
 
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: inherit;
+}
+
+@media only screen and (min-width: 1000px) {
+  .my-parallax {
+      /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+      background-size: contain;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  nav {
+    padding: 0 40px;
+  }
+
+  .nav-items-fixed {
+    padding-right: 40px;
+    position: inherit;
+  }
+
+  nav ul a {
+    padding: 0 9px;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  nav ul li a {
+    font-size: 14px;
+  }
 }

@@ -48,8 +48,8 @@ function resizeBanner() {
         $('#banner').css('height', targetHeight);
 
         var logo = document.getElementById('logo');
-        $('.brand-logo').css('height', targetHeight);
-        $('.brand-logo').css('width', targetHeight * logo.naturalWidth / logo.naturalHeight);
+        $('.my-brand-logo').css('height', targetHeight);
+        $('.my-brand-logo').css('width', targetHeight * logo.naturalWidth / logo.naturalHeight);
         $('#logo-container').css('height', targetHeight);
         $('#nav-container').css('height', targetHeight);
       });
