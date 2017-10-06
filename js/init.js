@@ -3,6 +3,9 @@
     $('.button-collapse').sideNav();
     $('.dropdown-button').dropdown();
     $('.parallax').parallax();
+
+    $('.nav-item').append('<div class="nav-line scale-transition scale-out"></div>');
+
     resizeBanner();
   }); // end of document ready
 
@@ -10,6 +13,19 @@
     var win = $(this);
     resizeBanner();
   });
+
+  $(window).scroll(function() {
+    console.log($(window).scrollTop(), $('#banner').height(), $('.nav-items').outerHeight());
+    if ($(window).scrollTop() < $('#banner').height() - $('.nav-items').outerHeight() / 2) {
+      $('.nav-items').addClass('nav-items-fixed');
+    } else {
+      $('.nav-items').removeClass('nav-items-fixed');
+    }
+  });
+
+  $('.nav-item').mouseenter(toggleAnimation);
+  $('.nav-item').mouseleave(toggleAnimation);
+
 })(jQuery); // end of jQuery name space
 
 function resizeBanner() {
@@ -23,13 +39,25 @@ function resizeBanner() {
       image = new Image();
 
       image.src = image_url;
+
+      $(image).load(function () {
+        var imageIdeal = new Image();
+        imageIdeal.width = image.width * (300 / image.height);
+
+        var targetHeight = ($('#banner').width() * image.height / image.width) - 1;
+        $('#banner').css('height', targetHeight);
+
+        var logo = document.getElementById('logo');
+        $('.brand-logo').css('height', targetHeight);
+        $('.brand-logo').css('width', targetHeight * logo.naturalWidth / logo.naturalHeight);
+        $('#logo-container').css('height', targetHeight);
+        $('#nav-container').css('height', targetHeight);
+      });
+
   }
+}
 
-  var imageIdeal = new Image();
-  imageIdeal.width = image.width * (300 / image.height);
-
-  var targetHeight = ($('#banner').width() * image.height / image.width) - 1;
-  $('#banner').css('height', targetHeight);
-  console.log("should resize");
-
+function toggleAnimation() {
+  console.log($(this).children().length);
+  $(this).children('.nav-line').toggleClass('scale-in');
 }
