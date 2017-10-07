@@ -15,11 +15,10 @@
   });
 
   $(window).scroll(function() {
-    console.log($(window).scrollTop(), $('#banner').height(), $('.nav-items').outerHeight());
     if ($(window).scrollTop() < $('#banner').height() - $('.nav-items').outerHeight() / 2) {
-      $('.nav-items').addClass('nav-items-fixed');
+      $('.nav-items').removeClass('hidden');
     } else {
-      $('.nav-items').removeClass('nav-items-fixed');
+      $('.nav-items').addClass('hidden');
     }
   });
 

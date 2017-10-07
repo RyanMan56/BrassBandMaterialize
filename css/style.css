@@ -29,14 +29,7 @@ body {
 
 #logo-container {
   position: relative;
-  display: flex;
-  flex-direction: column;
-}
-.flex-initial {
-  flex: initial;
-}
-.flex-auto {
-  flex: auto;
+  text-align: center;
 }
 nav {
   position: absolute;
@@ -47,6 +40,7 @@ nav {
 nav .my-brand-logo {
   width: 0;
   height: 0;
+  float: left;
   position: relative;
   display: inline-block;
   color: #fff;
@@ -56,11 +50,16 @@ nav .my-brand-logo {
 
 #title {
   position: relative;
-  display: inline-block;
-  margin: 24px;
-  bottom: 24px;
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  margin: auto;
+  bottom: 0;
   font-family: 'Cabin', sans-serif;
   letter-spacing: 1px;
+}
+#title > h3 {
+  margin: 5px;
 }
 .nav-items {
   padding-top: 24px;
@@ -68,7 +67,11 @@ nav .my-brand-logo {
 .nav-items-fixed {
   position: fixed;
   right: 0;
+  top: 0;
   padding-right: 60px;
+}
+.hidden {
+  display: none;
 }
 .nav-item {
   text-transform: capitalize;
@@ -122,10 +125,14 @@ nav ul a:hover {
 }
 
 #hamburger {
-  display: inline-flex;
   height: 100%;
   float: right;
   margin: 0;
+  align-items: flex-start;
+}
+
+.hamburger-icon {
+  margin-top: 24px;
 }
 
 .my-parallax {
@@ -153,19 +160,63 @@ nav ul a:hover {
   nav {
     padding: 0 40px;
   }
-
   .nav-items-fixed {
     padding-right: 40px;
     position: inherit;
   }
-
   nav ul a {
     padding: 0 9px;
   }
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 790px) {
   nav ul li a {
     font-size: 14px;
+  }
+  .nav-items-fixed {
+    padding-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .hide-on-small-only {
+    display: none !important;
+  }
+  h3 {
+    font-size: 2.5rem;
+  }
+  #title {
+    justify-content: center;
+    align-items: center;
+  }
+  #hamburger {
+    align-items: center;
+  }
+  .hamburger-icon {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .my-hide-on-med-and-up {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  h3 {
+    font-size: 2.0rem;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  h3 {
+    font-size: 1.5rem;
   }
 }
