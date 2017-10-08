@@ -63,12 +63,31 @@ nav .my-brand-logo {
 }
 .nav-items {
   padding-top: 24px;
+  position: absolute;
+  z-index: 2;
 }
 .nav-items-fixed {
-  position: fixed;
   right: 0;
   top: 0;
   padding-right: 60px;
+}
+.nav-background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 64px;
+  width: 100%;
+  z-index: 2;
+  background-color: #1976d2;
+}
+.nav-background-height {
+  margin-top: 24px;
+}
+.clock-icon {
+  width: 100px;
+  height: 100px;
+  margin-left: 60px;
+  background-color: #ffb300 ;
 }
 .hidden {
   display: none;
@@ -148,15 +167,48 @@ nav ul a:hover {
   background-attachment: inherit;
 }
 
-@media only screen and (min-width: 1000px) {
+.page-footer {
+  padding-bottom: 20px;
+}
+
+.page-footer p {
+  font-size: 14px;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.social-container {
+  text-align: center;
+}
+
+.text-button {
+  font-family: 'Cabin', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.social-icon {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+@media only screen and (min-width: 1001px) {
   .my-parallax {
       /* Create the parallax scrolling effect */
       background-attachment: fixed;
       background-size: contain;
   }
+  .nav-remove-padding {
+    padding-top: 0;
+    position: fixed;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
+  .my-hide-on-med-and-down {
+    display: none !important;
+  }
   nav {
     padding: 0 40px;
   }
@@ -179,7 +231,7 @@ nav ul a:hover {
 }
 
 @media only screen and (max-width: 700px) {
-  .hide-on-small-only {
+  .my-hide-on-small-only {
     display: none !important;
   }
   h3 {
@@ -194,6 +246,12 @@ nav ul a:hover {
   }
   .hamburger-icon {
     margin-top: 0;
+  }
+  .social-icon {
+    margin: 0 10px;
+  }
+  footer .row > div {
+    text-align: center;
   }
 }
 

@@ -16,9 +16,17 @@
 
   $(window).scroll(function() {
     if ($(window).scrollTop() < $('#banner').height() - $('.nav-items').outerHeight() / 2) {
-      $('.nav-items').removeClass('hidden');
+      $('#nav-background').removeClass('scale-in');
     } else {
-      $('.nav-items').addClass('hidden');
+      $('#nav-background').addClass('scale-in');
+    }
+    if ($(window).scrollTop() < 24) {
+      $('.nav-items').removeClass('nav-remove-padding');
+      $('#nav-background').addClass('nav-background-height');
+    }
+    else {
+      $('#nav-background').removeClass('nav-background-height');
+      $('.nav-items').addClass('nav-remove-padding');
     }
   });
 
@@ -52,11 +60,9 @@ function resizeBanner() {
         $('#logo-container').css('height', targetHeight);
         $('#nav-container').css('height', targetHeight);
       });
-
   }
 }
 
 function toggleAnimation() {
-  console.log($(this).children().length);
   $(this).children('.nav-line').toggleClass('scale-in');
 }
