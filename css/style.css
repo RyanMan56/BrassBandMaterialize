@@ -35,7 +35,7 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 0px 60px;
+  padding: 0px 25px;
 }
 nav .my-brand-logo {
   width: 0;
@@ -59,7 +59,7 @@ nav .my-brand-logo {
   letter-spacing: 1px;
 }
 #title > h3 {
-  margin: 5px;
+  margin: 10px;
 }
 .nav-items {
   padding-top: 24px;
@@ -69,7 +69,7 @@ nav .my-brand-logo {
 .nav-items-fixed {
   right: 0;
   top: 0;
-  padding-right: 60px;
+  padding-right: 25px;
 }
 .nav-background {
   position: fixed;
@@ -86,8 +86,8 @@ nav .my-brand-logo {
 .clock-icon {
   width: 100px;
   height: 100px;
-  margin-left: 60px;
-  background-color: #ffb300 ;
+  margin-left: 25px;
+  background-color: #2b2b2b;
 }
 .hidden {
   display: none;
@@ -209,11 +209,7 @@ nav ul a:hover {
   .my-hide-on-med-and-down {
     display: none !important;
   }
-  nav {
-    padding: 0 40px;
-  }
   .nav-items-fixed {
-    padding-right: 40px;
     position: inherit;
   }
   nav ul a {
@@ -255,7 +251,7 @@ nav ul a:hover {
   }
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 701px) {
   .my-hide-on-med-and-up {
     display: none !important;
   }
@@ -270,6 +266,9 @@ nav ul a:hover {
 @media only screen and (max-width: 550px) {
   h3 {
     font-size: 1.5rem;
+  }
+  nav {
+    padding: 0 15px;
   }
 }
 

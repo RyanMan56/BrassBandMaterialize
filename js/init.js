@@ -7,11 +7,13 @@
     $('.nav-item').append('<div class="nav-line scale-transition scale-out"></div>');
 
     resizeBanner();
+    valignFooter();
   }); // end of document ready
 
   $(window).on('resize', function() {
     var win = $(this);
     resizeBanner();
+    valignFooter();
   });
 
   $(window).scroll(function() {
@@ -60,6 +62,14 @@ function resizeBanner() {
         $('#logo-container').css('height', targetHeight);
         $('#nav-container').css('height', targetHeight);
       });
+  }
+}
+
+function valignFooter() {
+  if (window.innerWidth <= 600) {
+    $('#footer-row').removeClass('valign-wrapper');
+  } else {
+    $('#footer-row').addClass('valign-wrapper');
   }
 }
 
