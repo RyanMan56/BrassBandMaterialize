@@ -167,6 +167,73 @@ nav ul a:hover {
   background-attachment: inherit;
 }
 
+#contents, #nav-container {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.heading {
+  font-family: 'Cabin', sans-serif;
+}
+
+.article {
+  margin: 5px;
+}
+
+.article-header {
+  display: inline-block;
+  width: 100%;
+}
+
+.article-header, .article-header-meta {
+}
+
+.article-header > * {
+  display: inline-block;
+}
+
+.article-header > *, .article-header-meta > * {
+  margin: 5px;
+}
+
+.article-header-meta {
+  float: right;
+}
+
+.article-header-meta > * {
+  display: inline-block;
+}
+
+.article-body {
+  padding: 8px 12px;
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+}
+
+.most-recent-articles {
+  display: block;
+  color: #737373;
+}
+
+.most-recent-articles > div {
+  display: inline-grid;
+  float: right;
+}
+
+.most-recent-articles > div > h5 {
+  display: inline-block;
+  color: #494949;
+}
+
+.most-recent-list {
+  display: inline-block;
+  margin-top: 0;
+  text-align: start;
+}
+
+.most-recent-list > li {
+  margin: 10px;
+}
+
 .page-footer {
   padding-bottom: 20px;
 }
@@ -275,5 +342,11 @@ nav ul a:hover {
 @media only screen and (max-width: 450px) {
   h3 {
     font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 322px) {
+  #title > h3 {
+    margin: 0;
   }
 }
