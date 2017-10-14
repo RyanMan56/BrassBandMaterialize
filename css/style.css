@@ -220,6 +220,7 @@ nav ul a:hover {
 }
 
 .most-recent-articles > div > h5 {
+  width: 100%;
   display: inline-block;
   color: #494949;
 }
@@ -248,7 +249,7 @@ nav ul a:hover {
   position: relative !important;
 }
 
-.active {
+.most-recent-list .active, #bands-dropdown-small.active {
   border-left: 2px solid #1976d2 !important;
   padding-left: 8px !important;
   font-weight: bold !important;
