@@ -176,7 +176,7 @@ nav ul a:hover {
 }
 
 .article {
-  margin: 5px;
+  margin: 20px 5px;
 }
 
 .article-header {
@@ -216,7 +216,7 @@ nav ul a:hover {
 
 .most-recent-articles > div {
   display: inline-grid;
-  float: right;
+  /*float: right;*/
 }
 
 .most-recent-articles > div > h5 {
@@ -230,8 +230,29 @@ nav ul a:hover {
   text-align: start;
 }
 
-.most-recent-list > li {
-  margin: 10px;
+.most-recent-list > li > a {
+  display: inline-block;
+  color: #737373;
+  margin: 5px 0;
+  padding: 0 10px;
+}
+
+.most-recent-list > li > a:hover {
+  color: #c7c7c7;
+  border-left: 1px solid #1976d2;
+  padding-left: 9px;
+}
+
+.most-recent-container-reset {
+  top: 0 !important;
+  position: relative !important;
+}
+
+.active {
+  border-left: 2px solid #1976d2 !important;
+  padding-left: 8px !important;
+  font-weight: bold !important;
+  color: inherit !important;
 }
 
 .page-footer {
