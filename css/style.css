@@ -167,7 +167,18 @@ nav ul a:hover {
   background-attachment: inherit;
 }
 
-#contents, #nav-container {
+.parallax-darken {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#contents {
+  border-top: solid 5px #ffca28;
+}
+
+#contents {
   border-bottom: 1px solid #e6e6e6;
 }
 
@@ -240,7 +251,7 @@ nav ul a:hover {
 
 .most-recent-list > li > a:hover {
   color: #c7c7c7;
-  border-left: 1px solid #1976d2;
+  border-left: 1px solid #ffca28;
   padding-left: 9px;
 }
 
@@ -250,7 +261,7 @@ nav ul a:hover {
 }
 
 .most-recent-list .active, #bands-dropdown-small.active {
-  border-left: 2px solid #1976d2 !important;
+  border-left: 2px solid #ffca28 !important;
   padding-left: 8px !important;
   font-weight: bold !important;
   color: inherit !important;

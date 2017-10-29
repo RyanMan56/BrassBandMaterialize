@@ -56,6 +56,7 @@ function resizeBanner() {
 
         var targetHeight = ($('#banner').width() * image.height / image.width) - 1;
         $('#banner').css('height', targetHeight);
+        $('.parallax-darken').css('height', targetHeight);
 
         var logo = document.getElementById('logo');
         $('.my-brand-logo').css('height', targetHeight);
