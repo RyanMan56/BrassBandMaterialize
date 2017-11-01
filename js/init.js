@@ -55,6 +55,7 @@ function resizeBanner() {
         imageIdeal.width = image.width * (300 / image.height);
 
         var targetHeight = ($('#banner').width() * image.height / image.width) - 1;
+        $('#banner').css('background-size', 'contain');
         $('#banner').css('height', targetHeight);
         $('.parallax-darken').css('height', targetHeight);
 
@@ -74,12 +75,14 @@ function afterBannerResize() {
 }
 
 function setupPushpin() {
-  $('#most-recent-container').addClass('most-recent-container-reset');
-  $('#most-recent-container').pushpin({
-    top: $('#most-recent-container').offset().top,
-    offset: 75
-  });
-  $('#most-recent-container').removeClass('most-recent-container-reset');
+  if ($('body').hasClass('dev') || document.location.pathname.length == 1) {
+    $('#most-recent-container').addClass('most-recent-container-reset');
+    $('#most-recent-container').pushpin({
+      top: $('#most-recent-container').offset().top,
+      offset: 75
+    });
+    $('#most-recent-container').removeClass('most-recent-container-reset');
+  }
 }
 
 function valignFooter() {
